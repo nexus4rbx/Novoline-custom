@@ -307,25 +307,7 @@ local Tab = Window:NewTab("Blatant")
 local Section = Tab:NewSection("Blatant")
 
 Section:NewSlider("Speed", "SliderInfo", 23, 0, function(v)
-if lplr.Character.HumanoidHealth > 0 then
-            RunLoops:BindToHeartbeat("Speed", function(delta)
-                if not lplr.Character.HumanoidHealth > 0 then return end
-                item = getItemNear("scythe")
-                if item and LocalPlayer.Character.HandInvItem.Value == item.tool and bedwars.CombatController and lplr.Character.HumanoidHealth > 0 then and not lplr.Character.HumanoidHealth = 0 then
-                    NewSpeed = Speed + 9
-                elseif LongJumpItem ~= nil and LongJumpItem then
-                    NewSpeed = Speed + 34.6
-                else
-                    NewSpeed = Speed
-                end
-                    local speedCFrame = LocalPlayer.character.Humanoid.MoveDirection * (NewSpeed - 20) * delta
-                    LocalPlayer.character.HumanoidRootPart.CFrame = LocalPlayer.character.HumanoidRootPart.CFrame + speedCFrame
-            end
-        end)
-        else
-            RunLoops:UnbindFromHeartbeat("Speed")
-        end
-    end})
+	lplr.Character.Humanoid.WalkSpeed = v
 end)
 
 local Section = Tab:NewSection("HighJump")
