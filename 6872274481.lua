@@ -448,7 +448,7 @@ local Section = Tab:NewSection("Fov")
 
 oldFov = game.Workspace.Camera.FieldOfView
 NewFov = {Value = 80}
-Section:NewToggle("Field Of Viev", "ButtonInfo", function(callback)
+Section:NewToggle("FOVChanger", "ButtonInfo", function(callback)
 	if callback == true then
 		game.Workspace.Camera.FieldOfView = NewFov.Value
 	end
@@ -463,7 +463,7 @@ local Tab = Window:NewTab("Utility")
 
 local Section = Tab:NewSection("Utility")
 
-Section:NewToggle("NoFall", "ButtonInfo", function(callback)
+Section:NewToggle("NoFallDmg", "ButtonInfo", function(callback)
 	if callback == true then
 		task.spawn(function()
 			repeat
@@ -488,7 +488,7 @@ for i,v in pairs(modules.ShopItems) do
     end
 end
 
-Section:NewToggle("ShopTierSkip", "ButtonInfo", function(callback)
+Section:NewToggle("ShopTierBypass", "ButtonInfo", function(callback)
 	if callback == true then
 	    for i,v in pairs(modules.ShopItems) do
 	        if type(v) == "table" then 
@@ -529,7 +529,7 @@ Section:NewToggle("ScytheDisabler", "ButtonInfo", function(callback)
 	end
 end)
 
-Section:NewToggle("AfkFarm", "ButtonInfo", function(callback)
+Section:NewToggle("AFKFarm", "ButtonInfo", function(callback)
 	if v then
 		local char = game:GetService("Players").LocalPlayer.Character
 		char:FindFirstChild("HumanoidRootPart").CFrame = char:FindFirstChild("HumanoidRootPart").CFrame + Vector3.new(0,99,0)
