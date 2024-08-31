@@ -20,7 +20,7 @@ local function isAlive(plr)
 	end
 end
 
-local function runcode(func)
+local function runcode(func) func() end
 	func()
 end
 
