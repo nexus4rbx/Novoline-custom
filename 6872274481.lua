@@ -1,4 +1,4 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/asfsnfskjsfjdgkjgfhfjhfjhfsjhjfjfh/GalaxywareV1ForMobilee/main/GuiLibrary.lua", true))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/nexus4rbx/Novoline-custom/main/GuiLibrary.lua", true))()
 local entity = loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/Libraries/entityHandler.lua", true))()
 
 local players = game:GetService("Players")
@@ -200,7 +200,7 @@ local function getCurrentSword()
 	return sword, swordslot
 end
 
-local Window = Library.CreateLib("Mana Mobile", theme)
+local Window = Library.CreateLib("Novoline", theme)
 
 local Tab = Window:NewTab("Combat")
 
@@ -463,7 +463,7 @@ local Tab = Window:NewTab("Utility")
 
 local Section = Tab:NewSection("Utility")
 
-Section:NewToggle("NoFallDmg", "ButtonInfo", function(callback)
+Section:NewToggle("NoFall", "ButtonInfo", function(callback)
 	if callback == true then
 		task.spawn(function()
 			repeat
@@ -636,4 +636,4 @@ end)
 
 local Tab = Window:NewTab("Info")
 
-local Section = Tab:NewSection("Discord server: https://discord.gg/3r8txNAhsj")
+local Section = Tab:NewSection("Update!!")
